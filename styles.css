@@ -276,6 +276,11 @@ h3 {
   gap: 1rem;
 }
 
+.media-lead {
+  max-width: 62ch;
+  margin-bottom: 1.4rem;
+}
+
 .media-slot {
   margin: 0;
   border: 1px solid var(--line);
@@ -283,39 +288,30 @@ h3 {
   min-height: 220px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .media-video {
   grid-row: span 2;
 }
 
-.placeholder {
+.media-slot img,
+.media-slot video {
+  display: block;
+  width: 100%;
   flex: 1;
-  display: grid;
-  place-content: center;
-  gap: 0.45rem;
-  padding: 1rem;
-  border-bottom: 1px solid var(--line);
-  background:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 8px,
-      rgba(10, 11, 12, 0.03) 8px,
-      rgba(10, 11, 12, 0.03) 16px
-    );
-  text-align: center;
+  min-height: 0;
+  background: #d8dde6;
 }
 
-.placeholder strong {
-  font-family: "Space Mono", monospace;
-  font-size: 1rem;
+.media-slot img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
-.placeholder span {
-  font-family: "Space Mono", monospace;
-  font-size: 0.75rem;
-  color: var(--muted);
+.media-slot video {
+  min-height: 100%;
+  object-fit: cover;
 }
 
 figcaption {
@@ -323,6 +319,7 @@ figcaption {
   font-size: 0.75rem;
   color: var(--muted);
   padding: 0.55rem 0.75rem;
+  border-top: 1px solid var(--line);
 }
 
 .roadmap {
@@ -388,6 +385,10 @@ figcaption {
 
   .media-video {
     grid-row: auto;
+  }
+
+  .media-slot video {
+    aspect-ratio: 16 / 9;
   }
 }
 
