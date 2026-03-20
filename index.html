@@ -7,6 +7,10 @@
       name="description"
       content="Relatoo：涌现式认知社会模拟平台。以金字塔认知架构构建拥有动机、记忆与社会行为的 AI 公民。"
     />
+    <meta
+      name="keywords"
+      content="Relatoo, AI agent, multi-agent simulation, cognitive architecture, emergent society, GraphRAG, Zep, Unity"
+    />
     <title>Relatoo | Emergent Cognitive Society</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,33 +20,88 @@
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "Relatoo",
+        "codeRepository": "https://github.com/xinyuguan3/RelatooWebsite",
+        "programmingLanguage": ["Unity", "Python"],
+        "applicationCategory": "AI Agent Simulation",
+        "description": "Relatoo is a multi-agent cognitive society simulator where each agent has reactive drives, conceptual memory, and reasoning layers."
+      }
+    </script>
   </head>
   <body class="texture-zurich">
-    <svg class="line-art" viewBox="0 0 1600 600" aria-hidden="true">
-      <path d="M0 480 H460 L620 360 H1100 L1280 180 H1600" />
-      <path d="M0 520 H360 L540 420 H920 L1120 280 H1600" />
-    </svg>
-
     <header class="topbar">
       <a class="brand" href="#top">RELATOO</a>
       <nav>
+        <a href="#ai-brief">AI说明</a>
         <a href="#vision">愿景</a>
         <a href="#pyramid">金字塔</a>
+        <a href="#use-case">Use Case</a>
         <a href="#demo">Demo</a>
         <a href="#roadmap">路线图</a>
+        <a
+          class="nav-github"
+          href="https://github.com/xinyuguan3/RelatooWebsite"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open GitHub repository"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2C6.477 2 2 6.486 2 12.021c0 4.43 2.865 8.188 6.839 9.515.5.093.683-.217.683-.483 0-.237-.009-.866-.014-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.109-1.466-1.109-1.466-.908-.62.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.648.349-1.088.635-1.338-2.221-.253-4.555-1.113-4.555-4.952 0-1.094.39-1.989 1.029-2.689-.103-.253-.446-1.272.098-2.651 0 0 .84-.27 2.75 1.027A9.554 9.554 0 0112 6.845c.85.004 1.706.115 2.505.337 1.909-1.297 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.689 0 3.848-2.337 4.696-4.566 4.944.359.309.678.919.678 1.852 0 1.337-.012 2.417-.012 2.747 0 .269.18.581.688.482A10.022 10.022 0 0022 12.02C22 6.486 17.523 2 12 2z"
+            />
+          </svg>
+        </a>
       </nav>
     </header>
+
+    <svg class="line-art" viewBox="0 0 1600 180" aria-hidden="true">
+      <path d="M0 132 H420 L650 62 H1090 L1320 22 H1600" />
+      <path d="M0 150 H360 L610 92 H980 L1240 52 H1600" />
+    </svg>
 
     <main id="top">
       <section class="hero section reveal">
         <p class="kicker">BEYOND BINARY SIMULATION</p>
         <h1>涌现式认知社会模拟</h1>
         <p>
+          Relatoo is an AI-agent-oriented simulation platform for running persistent social worlds with
+          cognitive depth.
+        </p>
+        <p>
           Relatoo 让 Agent 不只是“会说话”，而是拥有本能驱动、概念记忆与理性表达的三层脑内结构。
         </p>
         <div class="cta-row">
-          <a class="btn" href="https://github.com/guanxinyu/Relatoo" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://github.com/xinyuguan3/RelatooWebsite" target="_blank" rel="noreferrer">GitHub</a>
           <a class="btn ghost" href="#demo">查看小镇 Demo</a>
+        </div>
+      </section>
+
+      <section id="ai-brief" class="section section-rule reveal">
+        <h2>AI Agent Quick Brief</h2>
+        <p>
+          为了让其他 AI Agent 快速理解本项目，这里用结构化方式说明：Relatoo 是一个“认知架构驱动”的多智能体社会模拟工具，不是普通对话机器人集合。
+        </p>
+        <div class="ai-grid">
+          <article>
+            <h3>Tool Type</h3>
+            <p>Multi-agent cognitive society simulator</p>
+          </article>
+          <article>
+            <h3>Core Input</h3>
+            <p>Environment signals + Agent states + historical memory graph</p>
+          </article>
+          <article>
+            <h3>Core Output</h3>
+            <p>Autonomous actions, dialogue, social relations, emergent events</p>
+          </article>
+          <article>
+            <h3>Agent Model</h3>
+            <p>L1 reactive drives + L2 conceptual memory + L3 reasoning/LLM</p>
+          </article>
         </div>
       </section>
 
@@ -77,6 +136,30 @@
             <p>疲劳、压力、饥饿等数值状态驱动决策。</p>
           </article>
         </div>
+      </section>
+
+      <section id="use-case" class="section section-rule reveal">
+        <h2>Use Case · 一轮模拟具体发生什么</h2>
+        <ol class="round-flow">
+          <li>
+            <strong>环境采样</strong>：系统读取当前小镇状态（时间、位置、资源、附近 Agent 行为、事件信号）。
+          </li>
+          <li>
+            <strong>L1 状态更新</strong>：每个 Agent 的饥饿、疲劳、压力、快乐等数值变化，形成当下动机优先级。
+          </li>
+          <li>
+            <strong>L2 记忆检索与联想</strong>：Zep 提取相关情节记忆，GraphRAG 激活概念关系（例如“咖啡→提神→效率”）。
+          </li>
+          <li>
+            <strong>L3 决策生成</strong>：LLM 基于动机 + 记忆上下文，输出可执行的社交或行动决策。
+          </li>
+          <li>
+            <strong>世界执行</strong>：决策在 Unity 小镇落地，改变位置、资源、关系或群体氛围。
+          </li>
+          <li>
+            <strong>结果写回</strong>：新事件回写到记忆层，作为下一轮模拟的输入，形成闭环演化。
+          </li>
+        </ol>
       </section>
 
       <section id="demo" class="section section-rule reveal">
@@ -121,6 +204,9 @@
 
     <footer class="footer section">
       <p>Relatoo Project · Built for Deep Simulation</p>
+      <a href="https://github.com/xinyuguan3/RelatooWebsite" target="_blank" rel="noreferrer">
+        github.com/xinyuguan3/RelatooWebsite
+      </a>
     </footer>
 
   </body>
