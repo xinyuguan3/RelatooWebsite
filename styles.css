@@ -1,0 +1,354 @@
+:root {
+  --bg: #f7f8fa;
+  --surface: #eef1f6;
+  --ink: #0a0b0c;
+  --muted: #616670;
+  --accent: #da291c;
+  --line: rgba(10, 11, 12, 0.16);
+  --line-strong: rgba(10, 11, 12, 0.38);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Sans SC", sans-serif;
+  line-height: 1.65;
+}
+
+.texture-zurich {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(10, 11, 12, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 11, 12, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center center;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 4vw, 4rem);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  background: rgba(247, 248, 250, 0.85);
+}
+
+.brand,
+.topbar a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.topbar nav a {
+  font-family: "Space Mono", monospace;
+  font-size: 0.84rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms ease;
+}
+
+.topbar nav a:hover,
+.topbar nav a:focus-visible {
+  border-bottom-color: var(--ink);
+  outline: none;
+}
+
+.line-art {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 1.2rem;
+  opacity: 0.85;
+}
+
+.line-art path {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  stroke-dasharray: 2200;
+  stroke-dashoffset: 2200;
+  animation: draw-line 1200ms ease forwards;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.section {
+  padding: clamp(2rem, 5vw, 5rem) 0;
+}
+
+.section-rule {
+  position: relative;
+  padding-top: calc(clamp(2rem, 5vw, 5rem) + 32px);
+}
+
+.section-rule::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent) 25%,
+    var(--accent) 75%,
+    transparent
+  );
+  opacity: 0.5;
+}
+
+.hero h1 {
+  margin: 0.2rem 0 0;
+  font-family: "Space Mono", monospace;
+  font-size: clamp(2.8rem, 7vw, 7rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.kicker {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.hero p {
+  max-width: 70ch;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.55rem 1rem;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  transition: background-color 200ms ease, color 200ms ease;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--ink);
+  color: var(--bg);
+  outline: none;
+}
+
+.btn.ghost {
+  border-color: var(--line-strong);
+}
+
+h2 {
+  font-family: "Space Mono", monospace;
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+
+h3 {
+  font-family: "Space Mono", monospace;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.line-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.line-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.pyramid {
+  display: grid;
+  gap: 1rem;
+}
+
+.pyramid article {
+  background: color-mix(in srgb, var(--surface) 88%, white 12%);
+  border: 1px solid var(--line);
+  padding: 1rem;
+}
+
+.pyramid span {
+  display: inline-block;
+  font-family: "Space Mono", monospace;
+  font-size: 0.8rem;
+  border: 1px solid var(--line-strong);
+  padding: 0.1rem 0.45rem;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.media-slot {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-video {
+  grid-row: span 2;
+}
+
+.placeholder {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  gap: 0.45rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--line);
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(10, 11, 12, 0.03) 8px,
+      rgba(10, 11, 12, 0.03) 16px
+    );
+  text-align: center;
+}
+
+.placeholder strong {
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+}
+
+.placeholder span {
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+figcaption {
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding: 0.55rem 0.75rem;
+}
+
+.roadmap {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.roadmap li {
+  margin: 0.75rem 0;
+}
+
+.roadmap li::marker {
+  font-family: "Space Mono", monospace;
+}
+
+.roadmap .done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+  color: var(--muted);
+}
+
+.reveal {
+  animation: rise-in 600ms ease both;
+}
+
+@media (max-width: 900px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media-video {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    letter-spacing: -0.01em;
+  }
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line-art path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+
+  .reveal {
+    animation: none;
+  }
+}
