@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      id="meta-description"
       name="description"
       content="Relatoo：涌现式认知社会模拟平台。以金字塔认知架构构建拥有动机、记忆与社会行为的 AI 公民。"
     />
@@ -36,25 +37,33 @@
     <header class="topbar">
       <a class="brand" href="#top">RELATOO</a>
       <nav>
-        <a href="#ai-brief">AI说明</a>
-        <a href="#vision">愿景</a>
-        <a href="#pyramid">金字塔</a>
-        <a href="#use-case">Use Case</a>
-        <a href="#demo">Demo</a>
-        <a href="#roadmap">路线图</a>
-        <a
-          class="nav-github"
-          href="https://github.com/xinyuguan3/Relatoo"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Open GitHub repository"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path
-              d="M12 2C6.477 2 2 6.486 2 12.021c0 4.43 2.865 8.188 6.839 9.515.5.093.683-.217.683-.483 0-.237-.009-.866-.014-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.109-1.466-1.109-1.466-.908-.62.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.648.349-1.088.635-1.338-2.221-.253-4.555-1.113-4.555-4.952 0-1.094.39-1.989 1.029-2.689-.103-.253-.446-1.272.098-2.651 0 0 .84-.27 2.75 1.027A9.554 9.554 0 0112 6.845c.85.004 1.706.115 2.505.337 1.909-1.297 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.689 0 3.848-2.337 4.696-4.566 4.944.359.309.678.919.678 1.852 0 1.337-.012 2.417-.012 2.747 0 .269.18.581.688.482A10.022 10.022 0 0022 12.02C22 6.486 17.523 2 12 2z"
-            />
-          </svg>
-        </a>
+        <a href="#ai-brief" data-i18n="nav.aiBrief">AI说明</a>
+        <a href="#vision" data-i18n="nav.vision">愿景</a>
+        <a href="#pyramid" data-i18n="nav.pyramid">金字塔</a>
+        <a href="#use-case" data-i18n="nav.useCase">Use Case</a>
+        <a href="#demo" data-i18n="nav.demo">Demo</a>
+        <a href="#roadmap" data-i18n="nav.roadmap">路线图</a>
+        <div class="nav-tools">
+          <div class="lang-switch" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-btn" data-lang-toggle="zh">中文</button>
+            <button type="button" class="lang-btn" data-lang-toggle="en">EN</button>
+          </div>
+          <a
+            class="nav-github"
+            href="https://github.com/xinyuguan3/Relatoo"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open GitHub repository"
+            data-i18n-attr="aria-label"
+            data-i18n-attr-key="nav.githubAria"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2C6.477 2 2 6.486 2 12.021c0 4.43 2.865 8.188 6.839 9.515.5.093.683-.217.683-.483 0-.237-.009-.866-.014-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.109-1.466-1.109-1.466-.908-.62.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.648.349-1.088.635-1.338-2.221-.253-4.555-1.113-4.555-4.952 0-1.094.39-1.989 1.029-2.689-.103-.253-.446-1.272.098-2.651 0 0 .84-.27 2.75 1.027A9.554 9.554 0 0112 6.845c.85.004 1.706.115 2.505.337 1.909-1.297 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.689 0 3.848-2.337 4.696-4.566 4.944.359.309.678.919.678 1.852 0 1.337-.012 2.417-.012 2.747 0 .269.18.581.688.482A10.022 10.022 0 0022 12.02C22 6.486 17.523 2 12 2z"
+              />
+            </svg>
+          </a>
+        </div>
       </nav>
     </header>
 
@@ -65,153 +74,160 @@
 
     <main id="top">
       <section class="hero section reveal">
-        <p class="kicker">BEYOND BINARY SIMULATION</p>
-        <h1>涌现式认知社会模拟</h1>
-        <p>
+        <p class="kicker" data-i18n="hero.kicker">BEYOND BINARY SIMULATION</p>
+        <h1 data-i18n="hero.title">涌现式认知社会模拟</h1>
+        <p data-i18n="hero.desc1">
           Relatoo is an AI-agent-oriented simulation platform for running persistent social worlds with
           cognitive depth.
         </p>
-        <p>
+        <p data-i18n="hero.desc2">
           Relatoo 让 Agent 不只是“会说话”，而是拥有本能驱动、概念记忆与理性表达的三层脑内结构。
         </p>
         <div class="cta-row">
           <a class="btn" href="https://github.com/xinyuguan3/Relatoo" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="btn ghost" href="#demo">查看小镇 Demo</a>
+          <a class="btn ghost" href="#demo" data-i18n="hero.demoCta">查看小镇 Demo</a>
         </div>
       </section>
 
       <section id="ai-brief" class="section section-rule reveal">
-        <h2>AI Agent Quick Brief</h2>
-        <p>
+        <h2 data-i18n="ai.title">AI Agent Quick Brief</h2>
+        <p data-i18n="ai.desc">
           为了让其他 AI Agent 快速理解本项目，这里用结构化方式说明：Relatoo 是一个“认知架构驱动”的多智能体社会模拟工具，不是普通对话机器人集合。
         </p>
         <div class="ai-grid">
           <article>
-            <h3>Tool Type</h3>
-            <p>Multi-agent cognitive society simulator</p>
+            <h3 data-i18n="ai.card1.title">Tool Type</h3>
+            <p data-i18n="ai.card1.body">Multi-agent cognitive society simulator</p>
           </article>
           <article>
-            <h3>Core Input</h3>
-            <p>Environment signals + Agent states + historical memory graph</p>
+            <h3 data-i18n="ai.card2.title">Core Input</h3>
+            <p data-i18n="ai.card2.body">Environment signals + Agent states + historical memory graph</p>
           </article>
           <article>
-            <h3>Core Output</h3>
-            <p>Autonomous actions, dialogue, social relations, emergent events</p>
+            <h3 data-i18n="ai.card3.title">Core Output</h3>
+            <p data-i18n="ai.card3.body">Autonomous actions, dialogue, social relations, emergent events</p>
           </article>
           <article>
-            <h3>Agent Model</h3>
-            <p>L1 reactive drives + L2 conceptual memory + L3 reasoning/LLM</p>
+            <h3 data-i18n="ai.card4.title">Agent Model</h3>
+            <p data-i18n="ai.card4.body">L1 reactive drives + L2 conceptual memory + L3 reasoning/LLM</p>
           </article>
         </div>
       </section>
 
       <section id="vision" class="section section-rule reveal">
-        <h2>为什么做这个</h2>
-        <p>
+        <h2 data-i18n="vision.title">为什么做这个</h2>
+        <p data-i18n="vision.desc">
           现有 AI 社会模拟常常停留在 Prompt 交换层。Relatoo 把“认知结构”作为核心对象，让行为来自状态、记忆与环境反馈的闭环，而不是预设台词。
         </p>
         <ul class="line-list">
-          <li>从单 Prompt 过渡到多层认知系统</li>
-          <li>从文本记忆过渡到概念图谱联想</li>
-          <li>从脚本行为过渡到内生动机行为</li>
+          <li data-i18n="vision.point1">从单 Prompt 过渡到多层认知系统</li>
+          <li data-i18n="vision.point2">从文本记忆过渡到概念图谱联想</li>
+          <li data-i18n="vision.point3">从脚本行为过渡到内生动机行为</li>
         </ul>
       </section>
 
       <section id="pyramid" class="section section-rule reveal">
-        <h2>脑内金字塔</h2>
+        <h2 data-i18n="pyramid.title">脑内金字塔</h2>
         <div class="pyramid">
           <article>
             <span>L3</span>
-            <h3>理性与交流层</h3>
-            <p>LLM 负责规划与语言表达。</p>
+            <h3 data-i18n="pyramid.l3.title">理性与交流层</h3>
+            <p data-i18n="pyramid.l3.body">LLM 负责规划与语言表达。</p>
           </article>
           <article>
             <span>L2</span>
-            <h3>概念与记忆层</h3>
-            <p>GraphRAG + Zep 管理记忆图谱与联想激活。</p>
+            <h3 data-i18n="pyramid.l2.title">概念与记忆层</h3>
+            <p data-i18n="pyramid.l2.body">GraphRAG + Zep 管理记忆图谱与联想激活。</p>
           </article>
           <article>
             <span>L1</span>
-            <h3>生理与本能层</h3>
-            <p>疲劳、压力、饥饿等数值状态驱动决策。</p>
+            <h3 data-i18n="pyramid.l1.title">生理与本能层</h3>
+            <p data-i18n="pyramid.l1.body">疲劳、压力、饥饿等数值状态驱动决策。</p>
           </article>
         </div>
       </section>
 
       <section id="use-case" class="section section-rule reveal">
-        <h2>Use Case · 一轮模拟具体发生什么</h2>
+        <h2 data-i18n="usecase.title">Use Case · 一轮模拟具体发生什么</h2>
         <ol class="round-flow">
           <li>
-            <strong>环境采样</strong>：系统读取当前小镇状态（时间、位置、资源、附近 Agent 行为、事件信号）。
+            <strong data-i18n="usecase.step1.title">环境采样</strong>
+            <span data-i18n="usecase.step1.body">：系统读取当前小镇状态（时间、位置、资源、附近 Agent 行为、事件信号）。</span>
           </li>
           <li>
-            <strong>L1 状态更新</strong>：每个 Agent 的饥饿、疲劳、压力、快乐等数值变化，形成当下动机优先级。
+            <strong data-i18n="usecase.step2.title">L1 状态更新</strong>
+            <span data-i18n="usecase.step2.body">：每个 Agent 的饥饿、疲劳、压力、快乐等数值变化，形成当下动机优先级。</span>
           </li>
           <li>
-            <strong>L2 记忆检索与联想</strong>：Zep 提取相关情节记忆，GraphRAG 激活概念关系（例如“咖啡→提神→效率”）。
+            <strong data-i18n="usecase.step3.title">L2 记忆检索与联想</strong>
+            <span data-i18n="usecase.step3.body">：Zep 提取相关情节记忆，GraphRAG 激活概念关系（例如“咖啡→提神→效率”）。</span>
           </li>
           <li>
-            <strong>L3 决策生成</strong>：LLM 基于动机 + 记忆上下文，输出可执行的社交或行动决策。
+            <strong data-i18n="usecase.step4.title">L3 决策生成</strong>
+            <span data-i18n="usecase.step4.body">：LLM 基于动机 + 记忆上下文，输出可执行的社交或行动决策。</span>
           </li>
           <li>
-            <strong>世界执行</strong>：决策在 Unity 小镇落地，改变位置、资源、关系或群体氛围。
+            <strong data-i18n="usecase.step5.title">世界执行</strong>
+            <span data-i18n="usecase.step5.body">：决策在 Unity 小镇落地，改变位置、资源、关系或群体氛围。</span>
           </li>
           <li>
-            <strong>结果写回</strong>：新事件回写到记忆层，作为下一轮模拟的输入，形成闭环演化。
+            <strong data-i18n="usecase.step6.title">结果写回</strong>
+            <span data-i18n="usecase.step6.body">：新事件回写到记忆层，作为下一轮模拟的输入，形成闭环演化。</span>
           </li>
         </ol>
       </section>
 
       <section id="demo" class="section section-rule reveal">
-        <h2>小镇 Demo</h2>
-        <p class="media-lead">
+        <h2 data-i18n="demo.title">小镇 Demo</h2>
+        <p class="media-lead" data-i18n="demo.desc">
           这里直接展示 Relatoo 小镇模拟的实际运行画面，包括持续演化视频和四个关键场景截图。
         </p>
         <div class="media-grid">
           <figure class="media-slot media-video">
             <video controls autoplay muted loop playsinline preload="metadata">
               <source src="assets/media/town-demo.mp4" type="video/mp4" />
-              您的浏览器不支持视频播放。
+              Your browser does not support video playback.
             </video>
-            <figcaption>Town Evolution Demo</figcaption>
+            <figcaption data-i18n="demo.videoCaption">Town Evolution Demo</figcaption>
           </figure>
           <figure class="media-slot">
-            <img src="assets/media/town-demo-1.png" alt="Relatoo simulated town overview with multiple agents and buildings" loading="lazy" />
-            <figcaption>Town Overview</figcaption>
+            <img src="assets/media/town-demo-1.png" alt="Relatoo simulated town overview with multiple agents and buildings" loading="lazy" data-i18n-attr="alt" data-i18n-attr-key="demo.image1Alt" />
+            <figcaption data-i18n="demo.image1Caption">Town Overview</figcaption>
           </figure>
           <figure class="media-slot">
-            <img src="assets/media/town-demo-2.png" alt="Relatoo town interface showing agent interactions and neighborhood activity" loading="lazy" />
-            <figcaption>Neighborhood Activity</figcaption>
+            <img src="assets/media/town-demo-2.png" alt="Relatoo town interface showing agent interactions and neighborhood activity" loading="lazy" data-i18n-attr="alt" data-i18n-attr-key="demo.image2Alt" />
+            <figcaption data-i18n="demo.image2Caption">Neighborhood Activity</figcaption>
           </figure>
           <figure class="media-slot">
-            <img src="assets/media/town-demo-3.png" alt="Relatoo world simulation with clustered buildings and social flow" loading="lazy" />
-            <figcaption>Social Flow Snapshot</figcaption>
+            <img src="assets/media/town-demo-3.png" alt="Relatoo world simulation with clustered buildings and social flow" loading="lazy" data-i18n-attr="alt" data-i18n-attr-key="demo.image3Alt" />
+            <figcaption data-i18n="demo.image3Caption">Social Flow Snapshot</figcaption>
           </figure>
           <figure class="media-slot">
-            <img src="assets/media/town-demo-4.png" alt="Relatoo simulation scene with roads, homes, and active agent paths" loading="lazy" />
-            <figcaption>Settlement Layout</figcaption>
+            <img src="assets/media/town-demo-4.png" alt="Relatoo simulation scene with roads, homes, and active agent paths" loading="lazy" data-i18n-attr="alt" data-i18n-attr-key="demo.image4Alt" />
+            <figcaption data-i18n="demo.image4Caption">Settlement Layout</figcaption>
           </figure>
         </div>
       </section>
 
       <section id="roadmap" class="section section-rule reveal">
-        <h2>Roadmap</h2>
+        <h2 data-i18n="roadmap.title">Roadmap</h2>
         <ol class="roadmap">
-          <li class="done">Phase 1: 原型定义 + Unity Demo</li>
-          <li>Phase 2: Zep 记忆接入</li>
-          <li>Phase 3: GraphRAG 概念联想</li>
-          <li>Phase 4: 20+ Agent 长期自治测试</li>
-          <li>Phase 5: 开源平台与资产</li>
+          <li class="done" data-i18n="roadmap.phase1">Phase 1: 原型定义 + Unity Demo</li>
+          <li data-i18n="roadmap.phase2">Phase 2: Zep 记忆接入</li>
+          <li data-i18n="roadmap.phase3">Phase 3: GraphRAG 概念联想</li>
+          <li data-i18n="roadmap.phase4">Phase 4: 20+ Agent 长期自治测试</li>
+          <li data-i18n="roadmap.phase5">Phase 5: 开源平台与资产</li>
         </ol>
       </section>
     </main>
 
     <footer class="footer section">
-      <p>Relatoo Project · Built for Deep Simulation</p>
+      <p data-i18n="footer.tagline">Relatoo Project · Built for Deep Simulation</p>
       <a href="https://github.com/xinyuguan3/Relatoo" target="_blank" rel="noreferrer">
         github.com/xinyuguan3/Relatoo
       </a>
     </footer>
 
+    <script src="main.js" defer></script>
   </body>
 </html>

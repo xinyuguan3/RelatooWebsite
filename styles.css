@@ -64,6 +64,7 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .topbar nav a {
@@ -101,6 +102,49 @@ body {
   background: var(--ink);
   color: var(--bg);
   border-color: var(--ink);
+}
+
+.topbar .nav-tools {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.topbar .lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.topbar .lang-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1;
+  padding: 0.36rem 0.55rem;
+  min-width: 2.1rem;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.topbar .lang-btn + .lang-btn {
+  border-left: 1px solid var(--line);
+}
+
+.topbar .lang-btn:hover,
+.topbar .lang-btn:focus-visible {
+  background: color-mix(in srgb, var(--surface) 70%, white 30%);
+  color: var(--ink);
+  outline: none;
+}
+
+.topbar .lang-btn.is-active {
+  background: var(--ink);
+  color: var(--bg);
 }
 
 .line-art {
@@ -396,6 +440,10 @@ figcaption {
   .topbar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .topbar .nav-tools {
+    margin-left: 0;
   }
 
   .hero h1 {
